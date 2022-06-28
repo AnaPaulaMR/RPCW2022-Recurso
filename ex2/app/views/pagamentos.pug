@@ -1,0 +1,79 @@
+extends layout
+
+block content
+    h1(class="w3-container w3-blue" style="margin-top:0") Lista de Pagamentos
+    .w3-container.w3-margin
+        table.w3-table-all
+            tr
+                th Fração
+                th Janeiro
+                th Fevereiro
+                th Março
+                th Abril
+                th Maio
+                th Junho
+                th Julho
+                th Agosto
+                th Setembro
+                th Outubro
+                th Novembro
+                th Dezembro
+            each p in lista
+                tr
+                    td= p.fracao
+                    if p.jan == 1
+                        td Pago
+                    else
+                        td
+                    if p.fev == 1
+                        td Pago
+                    else
+                        td
+                    if p.mar == 1
+                        td Pago
+                    else
+                        td
+                    if p.abr == 1
+                        td Pago
+                    else
+                        td
+                    if p.mai == 1
+                        td Pago
+                    else
+                        td
+                    if p.jun == 1
+                        td Pago
+                    else
+                        td
+                    if p.jul == 1
+                        td Pago
+                    else
+                        td
+                    if p.ago == 1
+                        td Pago
+                    else
+                        td
+                    if p.set == 1
+                        td Pago
+                    else
+                        td
+                    if p.out == 1
+                        td Pago
+                    else
+                        td
+                    if p.nov == 1
+                        td Pago
+                    else
+                        td
+                    if p.dez == 1
+                        td Pago
+                    else
+                        td 
+
+    footer(class="w3-container w3-blue w3-padding")
+        .w3-container
+            .w3-left
+                a(href='javascript: history.back()') Voltar à página anterior
+            .w3-right
+                a(href='/') Voltar à página inicial
+

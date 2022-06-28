@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1(class="w3-container w3-blue" style="margin-top: 0") Gestão de Condomínios
+  ul.w3-ul
+    li
+      b Total Recebido: #{recebido}
+    li
+      b Total Pago: #{pago}
+    li
+      a(href='/movimentos') Lista de Movimentos
+    li
+      a(href='/pagamentos') Lista de Pagamentos
+

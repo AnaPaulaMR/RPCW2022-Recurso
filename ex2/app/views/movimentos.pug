@@ -1,0 +1,29 @@
+extends layout
+
+block content
+    h1(class="w3-container w3-blue" style="margin-top:0") Lista de Movimentos
+    .w3-container.w3-margin
+        table.w3-table-all
+            tr
+                th Número
+                th Tipo
+                th Data
+                th Valor
+                th Entidade
+                th Descrição
+            each m in lista
+                tr
+                    td= m.numero
+                    td= m.descricao
+                    td= m.data
+                    td= m.valor
+                    td= m.entidade
+                    td= m.descricao
+
+    footer(class="w3-container w3-blue w3-padding")
+        .w3-container
+            .w3-left
+                a(href='javascript: history.back()') Voltar à página anterior
+            .w3-right
+                a(href='/') Voltar à página inicial
+

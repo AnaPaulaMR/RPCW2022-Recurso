@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    .w3-card-4.w3-margin
+        header(class="w3-container w3-blue")
+            h3 Novo Pagamento
+
+        form.w3-container.w3-margin(class='w3-container' method='POST' action='/pagamentos')
+            .w3-row.w3-margin-bottom
+                .w3-col.s3
+                    label.w3-text-teal Fração
+                .w3-col.s9.w3-border
+                    input.w3-input(type='text' name='numero' value=p.fracao)
+            .w3-row.w3-margin-bottom
+                .w3-col.s3
+                    label.w3-text-teal Meses
+                .w3-col.s9.w3-border
+                    each val, key in {1: "jan", 2: "fev", 3: "mar", 4: "abr", 5: "mai", 6: "jun", 7: "jul", 8: "ago", 9: "set", 10: "out", 11: "nov", 12: "dez"}
+                        fieldset
+                            legend= val
+                            input.w3-check(type='checkbox' checked)
+
+            
+            .w3-row.w3-margin-top
+                input.w3-btn.w3-teal(type='submit' value='Adicionar')
+
+        footer(class="w3-container w3-blue w3-padding")
+            .w3-container
+                .w3-left
+                    a(href='javascript: history.back()') Voltar à página anterior
+                .w3-right
+                    a(href='/') Voltar à página inicial

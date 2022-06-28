@@ -1,0 +1,19 @@
+Ex1:
+    - python3 fracoes.py > fracoes.json
+    - python3 movimentos.py > movientos.json
+    - python3 pagamentos.py > pagamentos.json
+    - retirar última vírgula dos jsonArrays
+    - mongoimport -d CONDOMINIO -c pagamentos --file pagamentos.json --jsonArray
+    - mongoimport -d CONDOMINIO -c movimentos --file movimentos.json --jsonArray
+    - mongoimport -d CONDOMINIO -c fracoes --file fracoes.json --jsonArray
+    - Express
+
+    - Inicia com 
+        npm i
+        npm start
+
+Ex2:
+    - Express e axios
+    - Inicia com 
+        npm i
+        npm start
